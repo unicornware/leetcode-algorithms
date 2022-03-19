@@ -152,11 +152,11 @@ const config = {
       {
         accessibility: 'no-public',
         overrides: {
-          accessors: 'explicit',
+          accessors: 'no-public',
           constructors: 'no-public',
-          methods: 'explicit',
-          properties: 'explicit',
-          parameterProperties: 'explicit'
+          methods: 'no-public',
+          properties: 'no-public',
+          parameterProperties: 'no-public'
         }
       }
     ],
