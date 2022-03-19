@@ -44,7 +44,6 @@ export const mochaHooks: RootHookObject = {
    *
    * - Updating the global test context, {@link Mocha.Context}
    *
-   * @see https://github.com/faker-js/faker
    * @see https://github.com/facebook/jest/tree/main/packages/pretty-format
    * @see https://sinonjs.org/releases/v11.1.2/sandbox
    *
@@ -52,8 +51,7 @@ export const mochaHooks: RootHookObject = {
    * @return {void} Nothing when complete
    */
   beforeAll(this: Mocha.Context): void {
-    // Add faker, inspect, pretty-format, and global sandbox to test context
-    this.faker = faker
+    // Add inspect, pretty-format, and global sandbox to test context
     this.inspect = inspect
     this.pf = pf
     this.sandbox = sandbox
