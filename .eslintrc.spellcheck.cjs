@@ -136,7 +136,7 @@ const config = {
           SEVERITY,
           Object.assign({}, OPTIONS, {
             ...OPTIONS,
-            skipWords: [...SKIP_WORDS, 'algs']
+            skipWords: [...SKIP_WORDS, 'algs', 'leetcode', 'nums']
           })
         ]
       }

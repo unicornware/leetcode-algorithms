@@ -237,7 +237,7 @@ const config = {
         ignoredTypeNames: ['RegExp']
       }
     ],
-    '@typescript-eslint/no-confusing-non-null-assertion': 2,
+    '@typescript-eslint/no-confusing-non-null-assertion': 0,
     '@typescript-eslint/no-confusing-void-expression': [
       2,
       {
@@ -294,19 +294,7 @@ const config = {
     ],
     '@typescript-eslint/no-loop-func': 2,
     '@typescript-eslint/no-loss-of-precision': 2,
-    '@typescript-eslint/no-magic-numbers': [
-      2,
-      {
-        enforceConst: true,
-        detectObjects: false,
-        ignore: [-1, 0, 1, 98],
-        ignoreArrayIndexes: true,
-        ignoreDefaultValues: true,
-        ignoreEnums: true,
-        ignoreNumericLiteralTypes: true,
-        ignoreReadonlyClassProperties: true
-      }
-    ],
+    '@typescript-eslint/no-magic-numbers': 0,
     '@typescript-eslint/no-meaningless-void-operator': 0,
     '@typescript-eslint/no-misused-new': 2,
     '@typescript-eslint/no-misused-promises': [
@@ -738,7 +726,7 @@ const config = {
     'unicorn/no-await-expression-member': 0,
     'unicorn/no-console-spaces': 2,
     'unicorn/no-empty-file': 2,
-    'unicorn/no-for-loop': 2,
+    'unicorn/no-for-loop': 0,
     'unicorn/no-hex-escape': 2,
     'unicorn/no-instanceof-array': 2,
     'unicorn/no-keyword-prefix': [
@@ -862,17 +850,7 @@ const config = {
         ]
       }
     },
-    {
-      files: [
-        '.commitlintrc.ts',
-        '.eslintrc.*',
-        '.lintstagedrc.cjs',
-        '.mocharc.*'
-      ],
-      rules: {
-        '@typescript-eslint/no-magic-numbers': 0
-      }
-    },
+
     {
       files: ['.eslintrc.*', '.mocharc.*'],
       rules: {
@@ -931,7 +909,7 @@ const config = {
     {
       files: ['**/*.spec.ts'],
       rules: {
-        '@typescript-eslint/no-magic-numbers': 0,
+        '@typescript-eslint/no-misused-promises': 0,
         '@typescript-eslint/no-unused-expressions': 0,
         '@typescript-eslint/restrict-template-expressions': 0,
         'unicorn/consistent-destructuring': 0,
