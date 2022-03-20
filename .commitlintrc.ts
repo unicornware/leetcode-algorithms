@@ -51,6 +51,7 @@ const config: UserConfig = {
         'deps-dev',
         'deps-opt',
         'deps-peer',
+        'fixtures',
         'github',
         'scripts',
         'tests',
