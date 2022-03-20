@@ -3,6 +3,9 @@
  * @module leetcode-algorithms/07/reverse
  */
 
+import MAX_VALUE from '@fixtures/max-value.fixture'
+import MIN_VALUE from '@fixtures/min-value.fixture'
+
 /**
  * Given a signed 32-bit integer, `x`, the function returns `x` with its digits
  * reversed. If reversing `x` causes the value to go outside the signed 32-bit
@@ -33,7 +36,7 @@ function reverse(x: number): number {
   /** @const {number} reversed - `x` reversed */
   const reversed = Number.parseInt([...s, x < 0 ? '-' : ''].reverse().join(''))
 
-  return reversed < (-2) ** 31 || reversed > 2 ** 31 - 1 ? 0 : reversed
+  return reversed < MIN_VALUE || reversed > MAX_VALUE ? 0 : reversed
 }
 
 export default reverse
