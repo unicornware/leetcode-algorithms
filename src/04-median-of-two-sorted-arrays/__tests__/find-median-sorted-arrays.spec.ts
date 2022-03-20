@@ -20,7 +20,7 @@ describe('unit:04/findMedianSortedArrays', () => {
   ]
 
   cases.forEach(({ expected, nums1, nums2 }) => {
-    it(`should return ${expected} given [[${nums1}],[${nums2}]]`, () => {
+    it(`should return ${expected} given [[${nums1}], [${nums2}]]`, () => {
       expect(testSubject(nums1, nums2)).to.equal(expected)
     })
   })

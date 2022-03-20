@@ -52,7 +52,7 @@ describe('unit:02/addTwoNumbers', () => {
     const list1 = l1?.toString() ?? null
     const list2 = l2?.toString() ?? null
 
-    it(`should return ${sum} given [${list1},${list2}]`, () => {
+    it(`should return ${sum} given [${list1}, ${list2}]`, () => {
       expect(testSubject(l1, l2)?.toJSON()).to.deep.equal(expected?.toJSON())
     })
   })

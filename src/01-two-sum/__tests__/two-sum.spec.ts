@@ -19,7 +19,7 @@ describe('unit:01/twoSum', () => {
   ]
 
   cases.forEach(({ expected, nums, target }) => {
-    it(`should return ${expected} given [${nums},${target}]`, () => {
+    it(`should return [${expected}] given [[${nums}], ${target}]`, () => {
       expect(testSubject(nums, target)).to.have.ordered.members(expected)
     })
   })
