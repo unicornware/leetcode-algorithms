@@ -1,14 +1,14 @@
 /**
  * @file Unit Tests - addTwoNumbers
- * @module leetcode-algorithms/02/addTwoNumbers/tests/unit
+ * @module leetcode-algorithms/algorithms/02/addTwoNumbers/tests/unit
  */
 
+import type { OneDigitInteger09 } from '@leetcode-algorithms/types'
 import type { Testcase } from '@tests/interfaces'
 import testSubject from '../add-two-numbers'
 import ListNode from '../list-node'
-import type ListNodeValue from '../list-node-value.type'
 
-describe('unit:02/addTwoNumbers', () => {
+describe('unit:algorithms/02/addTwoNumbers', () => {
   interface Case extends Testcase<ReturnType<typeof testSubject>> {
     l1: ListNode | null
     l2: ListNode | null
@@ -17,10 +17,10 @@ describe('unit:02/addTwoNumbers', () => {
   /**
    * Creates a new list and returns the first node in the list.
    *
-   * @param {ListNodeValue[]} reversed - List node values in reverse order
+   * @param {OneDigitInteger09[]} reversed - List node values in reverse order
    * @return {ListNode} First node in list
    */
-  const createList = (reversed: ListNodeValue[]): ListNode => {
+  const createList = (reversed: OneDigitInteger09[]): ListNode => {
     let nodes = reversed.map(val => new ListNode(val))
     nodes.forEach((node, i) => (node.next = nodes[i + 1] ?? null))
 

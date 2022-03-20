@@ -1,9 +1,9 @@
 /**
  * @file addTwoNumbers - ListNode
- * @module leetcode-algorithms/02/addTwoNumbers/ListNode
+ * @module leetcode-algorithms/algorithms/02/addTwoNumbers/ListNode
  */
 
-import ListNodeValue from './list-node-value.type'
+import { OneDigitInteger09 } from '@leetcode-algorithms/types'
 
 /**
  * Singly linked list.
@@ -17,17 +17,17 @@ class ListNode {
 
   /**
    * @public
-   * @property {ListNodeValue} val - List node value
+   * @property {OneDigitInteger09} val - List node value
    */
-  val: ListNodeValue
+  val: OneDigitInteger09
 
   /**
    * Creates a new list node.
    *
-   * @param {ListNodeValue} [val] - List node value
+   * @param {OneDigitInteger09} [val] - List node value
    * @param {ListNode | null} [next] - Next node in list, if any
    */
-  constructor(val?: ListNodeValue, next?: ListNode | null) {
+  constructor(val?: OneDigitInteger09, next?: ListNode | null) {
     this.val = val === undefined ? 0 : val
     this.next = next === undefined ? null : next
   }

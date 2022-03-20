@@ -1,12 +1,12 @@
 /**
  * @file Unit Tests - reverse
- * @module leetcode-algorithms/07/reverse/tests/unit
+ * @module leetcode-algorithms/algorithms/07/reverse/tests/unit
  */
 
 import type { Testcase } from '@tests/interfaces'
 import testSubject from '../reverse'
 
-describe('unit:07/reverse', () => {
+describe('unit:algorithms/07/reverse', () => {
   interface Case extends Testcase<ReturnType<typeof testSubject>> {
     x: number
   }

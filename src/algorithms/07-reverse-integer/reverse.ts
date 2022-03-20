@@ -1,6 +1,6 @@
 /**
  * @file reverse
- * @module leetcode-algorithms/07/reverse
+ * @module leetcode-algorithms/algorithms/07/reverse
  */
 
 import MAX_VALUE from '@fixtures/max-value.fixture'

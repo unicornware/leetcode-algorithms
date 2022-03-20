@@ -1,12 +1,12 @@
 /**
  * @file Unit Tests - twoSum
- * @module leetcode-algorithms/01/twoSum/tests/unit
+ * @module leetcode-algorithms/algorithms/01/twoSum/tests/unit
  */
 
 import type { Testcase } from '@tests/interfaces'
 import testSubject from '../two-sum'
 
-describe('unit:01/twoSum', () => {
+describe('unit:algorithms/01/twoSum', () => {
   interface Case extends Testcase<ReturnType<typeof testSubject>> {
     nums: number[]
     target: number

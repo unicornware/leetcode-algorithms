@@ -1,6 +1,6 @@
 /**
  * @file twoSum
- * @module leetcode-algorithms/01/twoSum
+ * @module leetcode-algorithms/algorithms/01/twoSum
  */
 
 /**

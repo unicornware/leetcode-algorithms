@@ -1,6 +1,6 @@
 /**
  * @file findMedianSortedArrays
- * @module leetcode-algorithms/04/findMedianSortedArrays
+ * @module leetcode-algorithms/algorithms/04/findMedianSortedArrays
  */
 
 /**

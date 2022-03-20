@@ -1,6 +1,6 @@
 /**
  * @file lengthOfLongestSubstring
- * @module leetcode-algorithms/03/lengthOfLongestSubstring
+ * @module leetcode-algorithms/algorithms/03/lengthOfLongestSubstring
  */
 
 /**

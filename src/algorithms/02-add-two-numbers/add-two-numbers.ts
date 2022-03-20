@@ -1,10 +1,10 @@
 /**
  * @file addTwoNumbers
- * @module leetcode-algorithms/02/addTwoNumbers
+ * @module leetcode-algorithms/algorithms/02/addTwoNumbers
  */
 
+import type { OneDigitInteger09 } from '@leetcode-algorithms/types'
 import ListNode from './list-node'
-import type ListNodeValue from './list-node-value.type'
 
 /**
  * Given two **non-empty** linked lists representing two non-negative integers,
@@ -42,11 +42,11 @@ function addTwoNumbers(
   if (sum >= 10) {
     next = addTwoNumbers(
       next,
-      new ListNode(JSON.parse(sum.toString().charAt(0)) as ListNodeValue)
+      new ListNode(JSON.parse(sum.toString().charAt(0)) as OneDigitInteger09)
     )
   }
 
-  return new ListNode((sum % 10) as ListNodeValue, next)
+  return new ListNode((sum % 10) as OneDigitInteger09, next)
 }
 
 export default addTwoNumbers

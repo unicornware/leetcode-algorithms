@@ -1,12 +1,12 @@
 /**
  * @file Unit Tests - lengthOfLongestSubstring
- * @module leetcode-algorithms/03/lengthOfLongestSubstring/tests/unit
+ * @module leetcode-algorithms/algorithms/03/lengthOfLongestSubstring/tests/unit
  */
 
 import type { Testcase } from '@tests/interfaces'
 import testSubject from '../length-of-longest-substring'
 
-describe('unit:03/lengthOfLongestSubstring', () => {
+describe('unit:algorithms/03/lengthOfLongestSubstring', () => {
   interface Case extends Testcase<ReturnType<typeof testSubject>> {
     s: string
   }
