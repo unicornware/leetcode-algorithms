@@ -36,6 +36,7 @@ const SKIP_WORD_IF_MATCH = []
 const SKIP_WORDS = [
   ...DEFAULTS.skipWords,
   'argv',
+  'atoi',
   'builtins',
   'chai',
   'ci',
@@ -92,6 +93,7 @@ const SKIP_WORDS = [
   'vm',
   'vscode',
   'webpack',
+  'whitespace',
   'wip',
   'workspace',
   'workspaces',

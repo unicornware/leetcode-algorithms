@@ -737,7 +737,7 @@ const config = {
         onlyCamelCase: true
       }
     ],
-    'unicorn/no-lonely-if': 2,
+    'unicorn/no-lonely-if': 0,
     'unicorn/no-nested-ternary': 0,
     'unicorn/no-new-array': 2,
     'unicorn/no-new-buffer': 2,
