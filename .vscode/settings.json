@@ -58,6 +58,11 @@
       "extensions": ["__fixtures__"],
       "format": "svg",
       "icon": "data"
+    },
+    {
+      "extensions": ["algorithms"],
+      "format": "svg",
+      "icon": "library"
     }
   ]
 }
