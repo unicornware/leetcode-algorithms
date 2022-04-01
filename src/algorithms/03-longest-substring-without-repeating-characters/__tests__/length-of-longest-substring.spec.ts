@@ -3,26 +3,26 @@
  * @module leetcode-algorithms/algorithms/03/lengthOfLongestSubstring/tests/unit
  */
 
-import type { Testcase } from '@tests/interfaces'
+import type { TestcaseFn } from '@tests/interfaces'
 import testSubject from '../length-of-longest-substring'
 
 describe('unit:algorithms/03/lengthOfLongestSubstring', () => {
-  interface Case extends Testcase<ReturnType<typeof testSubject>> {
-    s: string
-  }
+  interface Case extends TestcaseFn<typeof testSubject> {}
 
   const cases: Case[] = [
-    { expected: 0, s: '' },
-    { expected: 1, s: 'z' },
-    { expected: 3, s: 'abcabcbb' },
-    { expected: 1, s: 'bbbbb' },
-    { expected: 3, s: 'pwwkew' },
-    { expected: 3, s: 'dvdf' }
+    { expected: 0, parameters: [''] },
+    { expected: 1, parameters: ['z'] },
+    { expected: 3, parameters: ['abcabcbb'] },
+    { expected: 1, parameters: ['bbbbb'] },
+    { expected: 3, parameters: ['pwwkew'] },
+    { expected: 3, parameters: ['dvdf'] }
   ]
 
-  cases.forEach(({ expected, s }) => {
-    it(`should return ${expected} given ['${s}']`, () => {
-      expect(testSubject(s)).to.equal(expected)
+  cases.forEach(({ expected, parameters }) => {
+    const args = pf(parameters, { min: true })
+
+    it(`should return ${expected} given ${args}`, () => {
+      expect(testSubject(...parameters)).to.equal(expected)
     })
   })
 })

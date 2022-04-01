@@ -3,28 +3,28 @@
  * @module leetcode-algorithms/algorithms/08/myAtoi/tests/unit
  */
 
-import type { Testcase } from '@tests/interfaces'
+import type { TestcaseFn } from '@tests/interfaces'
 import testSubject from '../my-atoi'
 
 describe('unit:algorithms/08/myAtoi', () => {
-  interface Case extends Testcase<ReturnType<typeof testSubject>> {
-    s: string
-  }
+  interface Case extends TestcaseFn<typeof testSubject> {}
 
   const cases: Case[] = [
-    { expected: 0, s: '' },
-    { expected: 0, s: ' ' },
-    { expected: 13, s: '+13' },
-    { expected: 42, s: '42' },
-    { expected: -42, s: '   -42' },
-    { expected: 4193, s: '4193 with words' },
-    { expected: 0, s: 'words and 987' },
-    { expected: 0, s: '+-12' }
+    { expected: 0, parameters: [''] },
+    { expected: 0, parameters: [' '] },
+    { expected: 13, parameters: ['+13'] },
+    { expected: 42, parameters: ['42'] },
+    { expected: -42, parameters: ['   -42'] },
+    { expected: 4193, parameters: ['4193 with words'] },
+    { expected: 0, parameters: ['words and 987'] },
+    { expected: 0, parameters: ['+-12'] }
   ]
 
-  cases.forEach(({ expected, s }) => {
-    it(`should return ${expected} given ['${s}']`, () => {
-      expect(testSubject(s)).to.equal(expected)
+  cases.forEach(({ expected, parameters }) => {
+    const args = pf(parameters, { min: true })
+
+    it(`should return ${expected} given ${args}`, () => {
+      expect(testSubject(...parameters)).to.equal(expected)
     })
   })
 })
