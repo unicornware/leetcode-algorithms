@@ -486,6 +486,7 @@ const config = {
     '@typescript-eslint/unbound-method': [2, { ignoreStatic: true }],
     '@typescript-eslint/unified-signatures': 2,
     'array-bracket-newline': [2, { multiline: true }],
+    'array-element-newline': [2, 'consistent'],
     'brace-style': 0,
     'comma-dangle': 0,
     'comma-spacing': 0,
@@ -917,6 +918,7 @@ const config = {
         'unicorn/consistent-function-scoping': 0,
         'unicorn/explicit-length-check': 0,
         'unicorn/no-array-for-each': 0,
+        'unicorn/no-array-reduce': 0,
         'unicorn/prefer-at': 0,
         'unicorn/no-useless-undefined': 0
       }
