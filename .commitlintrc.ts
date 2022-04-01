@@ -57,6 +57,7 @@ const config: UserConfig = {
         'tests',
         'tools',
         'types',
+        'vscode',
         'workflows',
         'yarn'
       ]
