@@ -485,6 +485,7 @@ const config = {
     '@typescript-eslint/typedef': 0,
     '@typescript-eslint/unbound-method': [2, { ignoreStatic: true }],
     '@typescript-eslint/unified-signatures': 2,
+    'array-bracket-newline': [2, { multiline: true }],
     'brace-style': 0,
     'comma-dangle': 0,
     'comma-spacing': 0,
