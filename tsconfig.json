@@ -1,5 +1,5 @@
 {
-  // SEE: https://github.com/tsconfig/bases/blob/main/bases/node12.json
+  // SEE: https://github.com/tsconfig/bases/blob/main/bases/node14.json
   "compilerOptions": {
     "allowJs": true,
     "allowUnreachableCode": false,
@@ -11,7 +11,7 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": false,
-    "lib": ["es2020.bigint", "es2020.promise", "es2020.string", "es2019"],
+    "lib": ["dom", "dom.iterable", "es2020"],
     "module": "commonjs",
     "moduleResolution": "node",
     "noEmit": true,
@@ -38,7 +38,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es2019",
+    "target": "es2020",
     "useDefineForClassFields": true
   },
   "files": ["typings/index.d.ts"],

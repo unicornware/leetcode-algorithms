@@ -13,7 +13,7 @@ const spec = require('./.eslintrc.spec.cjs')
  */
 const config = {
   env: {
-    es2019: true,
+    es2020: true,
     node: true
   },
   extends: [

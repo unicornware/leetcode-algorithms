@@ -23,7 +23,7 @@ jobs:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN_ADMIN }}
     strategy:
       matrix:
-        node: [12.x]
+        node: [14.x]
     steps:
       - id: checkout
         name: Checkout branch
