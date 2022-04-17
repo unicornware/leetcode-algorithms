@@ -37,15 +37,13 @@ Example:
 - Node Version: `v16.6.0`
 - OS: `macOS v11.3.1`
 - Package Manager: `yarn@3.2.0`
-- Package version(s): `<=1.1.0`
-- Browser: `Firefox Developer Edition 93.0b7`
+- Package Version(s): `<=1.1.0`
 -->
 
 - Node Version: ``
 - OS: ``
 - Package Manager: ``
-- Package version(s): ``
-- Browser: ``
+- Package Version(s): ``
 
 ## Possible solution
 
