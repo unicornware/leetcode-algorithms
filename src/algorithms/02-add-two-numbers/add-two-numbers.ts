@@ -1,6 +1,7 @@
 /**
  * @file Algorithms - addTwoNumbers
  * @module leetcode/algorithms/02/addTwoNumbers
+ * @see https://leetcode.com/problems/add-two-numbers
  */
 
 import type { OneDigitInteger09 } from '@leetcode/types'
@@ -12,11 +13,9 @@ import ListNode from './list-node'
  * contains a single digit,the function adds the two numbers and returns the sum
  * as a linked list.
  *
- * @see {@link https://leetcode.com/problems/add-two-numbers}
- *
- * @example addTwoNumbers([2,4,3], [5,6,4]) => [7,0,8]
- * @example addTwoNumbers([0], [0]) => [0]
- * @example addTwoNumbers([9,9,9,9,9,9,9], [9,9,9,9]) => [8,9,9,9,0,0,0,1]
+ * @example addTwoNumbers([2, 4, 3], [5, 6, 4]) // [7, 0, 8]
+ * @example addTwoNumbers([0], [0]) // [0]
+ * @example addTwoNumbers([9, 9, 9, 9], [9, 9]) // [8, 9, 0, 0, 1]
  *
  * @param {ListNode | null} l1 - First addend
  * @param {ListNode | null} l2 - Second addend
@@ -33,20 +32,17 @@ function addTwoNumbers(
   if (!l1 || !l2) return l1 ?? l2
 
   /** @const {number} sum - Sum of current nodes */
-  const sum = l1.val + l2.val
+  const sum: number = l1.val + l2.val
 
-  /** @const {ListNode | null} next - Next node, if any */
-  let next = addTwoNumbers(l1.next ?? null, l2.next ?? null)
+  /** @var {ListNode | null} nx - Next node, if any */
+  let nx: ListNode | null = addTwoNumbers(l1.next ?? null, l2.next ?? null)
 
   // If sum is greater than 10, carry
   if (sum >= 10) {
-    next = addTwoNumbers(
-      next,
-      new ListNode(JSON.parse(sum.toString().charAt(0)) as OneDigitInteger09)
-    )
+    nx = addTwoNumbers(nx, new ListNode(+`${sum}`[0]! as OneDigitInteger09))
   }
 
-  return new ListNode((sum % 10) as OneDigitInteger09, next)
+  return new ListNode((sum % 10) as OneDigitInteger09, nx)
 }
 
 export default addTwoNumbers

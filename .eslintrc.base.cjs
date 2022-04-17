@@ -29,11 +29,7 @@ const config = {
       impliedStrict: true
     },
     extraFileExtensions: ['.cjs'],
-    project: [
-      './apps/**/tsconfig.json',
-      './packages/**/tsconfig.json',
-      './tsconfig.json'
-    ],
+    project: ['./tsconfig.json'],
     sourceType: 'module',
     tsconfigRootDir: __dirname,
     warnOnUnsupportedTypeScriptVersion: true
@@ -254,7 +250,7 @@ const config = {
         allow: ['constructors', 'decoratedFunctions']
       }
     ],
-    '@typescript-eslint/no-empty-interface': [2, { allowSingleExtends: true }],
+    '@typescript-eslint/no-empty-interface': 0,
     '@typescript-eslint/no-explicit-any': 0,
     '@typescript-eslint/no-extra-non-null-assertion': 2,
     '@typescript-eslint/no-extra-parens': 0,
@@ -426,7 +422,7 @@ const config = {
       2,
       {
         allowAny: false,
-        checkCompoundAssignments: false
+        checkCompoundAssignments: true
       }
     ],
     '@typescript-eslint/restrict-template-expressions': [
@@ -656,7 +652,16 @@ const config = {
       }
     ],
     'jsdoc/sort-tags': 0,
-    'jsdoc/tag-lines': [1, 'any', { count: 1, noEndLines: false, tags: {} }],
+    'jsdoc/tag-lines': [
+      1,
+      'any',
+      {
+        dropEndLines: true,
+        count: 1,
+        noEndLines: false,
+        tags: {}
+      }
+    ],
     'jsdoc/valid-types': [1, { allowEmptyNamepaths: true }],
     'keyword-spacing': 0,
     'lines-between-class-members': 0,
@@ -772,7 +777,7 @@ const config = {
     'unicorn/prefer-array-flat-map': 2,
     'unicorn/prefer-array-index-of': 2,
     'unicorn/prefer-array-some': 2,
-    'unicorn/prefer-at': 2,
+    'unicorn/prefer-at': 0,
     'unicorn/prefer-code-point': 2,
     'unicorn/prefer-date-now': 2,
     'unicorn/prefer-default-parameters': 2,
@@ -820,10 +825,36 @@ const config = {
   overrides: [
     ...require('./.eslintrc.spec.cjs').overrides,
     {
+      files: ['src/algorithms/*/*.ts'],
+      rules: {
+        'jsdoc/require-file-overview': [
+          1,
+          {
+            tags: {
+              file: {
+                initialCommentsOnly: true,
+                mustExist: true,
+                preventDuplicates: true
+              },
+              module: {
+                initialCommentsOnly: true,
+                mustExist: true,
+                preventDuplicates: true
+              },
+              see: {
+                initialCommentsOnly: false,
+                mustExist: true,
+                preventDuplicates: false
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
       files: ['typings/**'],
       rules: {
         '@typescript-eslint/ban-types': 0,
-        '@typescript-eslint/no-empty-interface': 0,
         '@typescript-eslint/triple-slash-reference': 0,
         'jsdoc/require-file-overview': 0,
         'no-undef': 0,
@@ -869,6 +900,7 @@ const config = {
     {
       files: ['**/*.cjs', '**/*.js', '**/*.md/*.js', '**/*.mdx/*.js'],
       rules: {
+        '@typescript-eslint/explicit-module-boundary-types': 0,
         '@typescript-eslint/no-implicit-any-catch': 0,
         '@typescript-eslint/no-require-imports': 0,
         '@typescript-eslint/no-unsafe-call': 0,
@@ -932,10 +964,35 @@ const config = {
           name: 'namepath-defining',
           required: ['name', 'type']
         },
-        param: {
+        extends: {
+          name: 'namepath-defining',
+          required: ['type']
+        },
+        implements: {
+          name: 'namepath-defining',
+          required: ['type']
+        },
+        member: {
+          name: 'namepath-defining',
           required: ['name', 'type']
         },
+        param: {
+          name: 'namepath-defining',
+          required: ['name', 'type']
+        },
+        return: {
+          name: 'namepath-defining',
+          required: ['type']
+        },
         throws: {
+          name: 'namepath-defining',
+          required: ['type']
+        },
+        var: {
+          name: 'namepath-defining',
+          required: ['name', 'type']
+        },
+        yield: {
           name: 'namepath-defining',
           required: ['type']
         }
@@ -944,7 +1001,10 @@ const config = {
         augments: 'extends',
         constant: 'const',
         fileoverview: 'file',
-        returns: 'return'
+        member: 'member',
+        returns: 'return',
+        var: 'var',
+        yields: 'yield'
       }
     }
   }

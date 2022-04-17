@@ -19,7 +19,10 @@ const SEVERITY = 2
  * node element values (comment, identifier, string, string template, etc) and
  * will not check the entire node content if matched
  */
-const SKIP_IF_MATCH = [...DEFAULTS.skipIfMatch]
+const SKIP_IF_MATCH = [
+  ...DEFAULTS.skipIfMatch,
+  '([A-Za-z]+)?([\\d])([A-Za-z]+)?'
+]
 
 /**
  * @type {string[]}
@@ -35,13 +38,17 @@ const SKIP_WORD_IF_MATCH = []
  */
 const SKIP_WORDS = [
   ...DEFAULTS.skipWords,
+  'abc',
+  'algs',
   'argv',
   'atoi',
+  'bool',
   'builtins',
   'chai',
   'ci',
   'cjs',
   'commitlint',
+  'curr',
   'dedupe',
   'dgram',
   'dns',
@@ -52,20 +59,28 @@ const SKIP_WORDS = [
   'enums',
   'esm',
   'explicitly',
+  'filenames',
   'formatter',
   'fs',
   'globals',
   'handoff',
+  'haversine',
   'impl',
   'instanceof',
+  'jsdoc',
   'jsonspec',
+  'lamda',
+  'latin',
   'loadenv',
   'matcher',
   'matchers',
   'mjs',
   'msg',
+  'multiline',
   'namespace',
   'ncc',
+  'num',
+  'nums',
   'os',
   'perf',
   'pnv',
@@ -75,9 +90,12 @@ const SKIP_WORDS = [
   'punycode',
   'querystring',
   'racecar',
+  'radians',
   'readline',
   'readonly',
+  'reformats',
   'sinon',
+  'str',
   'stringified',
   'strs',
   'testcase',
@@ -142,11 +160,11 @@ const config = {
             ...OPTIONS,
             skipWords: [
               ...SKIP_WORDS,
-              'algs',
               'dvdf',
               'leetcode',
-              'nums',
-              'pwwkew'
+              'nx',
+              'pwwkew',
+              'rmd'
             ]
           })
         ]

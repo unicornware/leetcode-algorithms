@@ -1,9 +1,9 @@
 /**
- * @file addTwoNumbers - ListNode
- * @module leetcode-algorithms/algorithms/02/addTwoNumbers/ListNode
+ * @file Algorithms - addTwoNumbers - ListNode
+ * @module leetcode/algorithms/02/addTwoNumbers/ListNode
  */
 
-import { OneDigitInteger09 } from '@leetcode-algorithms/types'
+import { OneDigitInteger09 } from '@leetcode/types'
 
 /**
  * Singly linked list.
@@ -35,15 +35,19 @@ class ListNode {
   /**
    * Creates a JSON representation of the node.
    *
-   * @return {number[]} JSON representation of `this`
+   * @return {OneDigitInteger09[]} JSON representation of `this`
    */
-  toJSON(): number[] {
-    const digits: number[] = [this.val]
-    let next: ListNode | null = this.next
+  toJSON(): OneDigitInteger09[] {
+    /** @const {OneDigitInteger09[]} digits - Digits in node */
+    const digits: OneDigitInteger09[] = [this.val]
 
-    while (next) {
-      digits.push(next.val)
-      next = next.next
+    /** @var {ListNode | null} curr - Current list node  */
+    let curr: ListNode | null = this.next
+
+    // Get digits
+    while (curr) {
+      digits.push(curr.val)
+      curr = curr.next
     }
 
     return digits
