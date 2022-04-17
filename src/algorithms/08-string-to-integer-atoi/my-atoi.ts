@@ -1,6 +1,6 @@
 /**
- * @file myAtoi
- * @module leetcode-algorithms/algorithms/08/myAtoi
+ * @file Algorithms - myAtoi
+ * @module leetcode/algorithms/08/myAtoi
  */
 
 import MAX_VALUE from '@fixtures/max-value.fixture'

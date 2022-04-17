@@ -1,6 +1,6 @@
 /**
- * @file isPalindrome
- * @module leetcode-algorithms/algorithms/09/isPalindrome
+ * @file Algorithms - isPalindrome
+ * @module leetcode/algorithms/09/isPalindrome
  */
 
 /**

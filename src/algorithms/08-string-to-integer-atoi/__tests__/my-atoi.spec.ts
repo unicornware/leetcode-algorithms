@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - myAtoi
- * @module leetcode-algorithms/algorithms/08/myAtoi/tests/unit
+ * @module leetcode/algorithms/08/myAtoi/tests/unit
  */
 
 import type { TestcaseFn } from '@tests/interfaces'

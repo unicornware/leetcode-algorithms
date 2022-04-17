@@ -1,9 +1,9 @@
 /**
  * @file Unit Tests - addTwoNumbers
- * @module leetcode-algorithms/algorithms/02/addTwoNumbers/tests/unit
+ * @module leetcode/algorithms/02/addTwoNumbers/tests/unit
  */
 
-import type { OneDigitInteger09 } from '@leetcode-algorithms/types'
+import type { OneDigitInteger09 } from '@leetcode/types'
 import type { TestcaseFn } from '@tests/interfaces'
 import testSubject from '../add-two-numbers'
 import ListNode from '../list-node'

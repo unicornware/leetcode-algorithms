@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - lengthOfLongestSubstring
- * @module leetcode-algorithms/algorithms/03/lengthOfLongestSubstring/tests/unit
+ * @module leetcode/algorithms/03/lengthOfLongestSubstring/tests/unit
  */
 
 import type { TestcaseFn } from '@tests/interfaces'

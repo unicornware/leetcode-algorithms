@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - reverse
- * @module leetcode-algorithms/algorithms/07/reverse/tests/unit
+ * @module leetcode/algorithms/07/reverse/tests/unit
  */
 
 import type { TestcaseFn } from '@tests/interfaces'

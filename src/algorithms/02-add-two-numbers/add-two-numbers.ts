@@ -1,9 +1,9 @@
 /**
- * @file addTwoNumbers
- * @module leetcode-algorithms/algorithms/02/addTwoNumbers
+ * @file Algorithms - addTwoNumbers
+ * @module leetcode/algorithms/02/addTwoNumbers
  */
 
-import type { OneDigitInteger09 } from '@leetcode-algorithms/types'
+import type { OneDigitInteger09 } from '@leetcode/types'
 import ListNode from './list-node'
 
 /**

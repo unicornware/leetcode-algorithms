@@ -26,7 +26,7 @@
       "@doubles/*": ["__doubles__/*"],
       "@fixtures/*": ["__fixtures__/*"],
       "@helpers/*": ["tools/helpers/*"],
-      "@leetcode-algorithms/*": ["src/*"],
+      "@leetcode/*": ["src/*"],
       "@tests/*": ["__tests__/*"]
     },
     "preserveConstEnums": true,

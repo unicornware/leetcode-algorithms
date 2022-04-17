@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - twoSum
- * @module leetcode-algorithms/algorithms/01/twoSum/tests/unit
+ * @module leetcode/algorithms/01/twoSum/tests/unit
  */
 
 import type { TestcaseFn } from '@tests/interfaces'

@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - isPalindrome
- * @module leetcode-algorithms/algorithms/09/isPalindrome/tests/unit
+ * @module leetcode/algorithms/09/isPalindrome/tests/unit
  */
 
 import type { TestcaseFn } from '@tests/interfaces'

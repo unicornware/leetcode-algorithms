@@ -1,6 +1,6 @@
 /**
- * @file longestCommonPrefix
- * @module leetcode-algorithms/algorithms/14/longestCommonPrefix
+ * @file Algorithms - longestCommonPrefix
+ * @module leetcode/algorithms/14/longestCommonPrefix
  */
 
 /**

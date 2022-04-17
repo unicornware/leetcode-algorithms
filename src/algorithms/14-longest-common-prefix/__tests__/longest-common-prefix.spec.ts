@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - longestCommonPrefix
- * @module leetcode-algorithms/algorithms/14/longestCommonPrefix/tests/unit
+ * @module leetcode/algorithms/14/longestCommonPrefix/tests/unit
  */
 
 import type { TestcaseFn } from '@tests/interfaces'

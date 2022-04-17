@@ -1,6 +1,6 @@
 /**
  * @file Unit Tests - findMedianSortedArrays
- * @module leetcode-algorithms/algorithms/04/findMedianSortedArrays/tests/unit
+ * @module leetcode/algorithms/04/findMedianSortedArrays/tests/unit
  */
 
 import type { TestcaseFn } from '@tests/interfaces'
