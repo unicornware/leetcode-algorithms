@@ -5,13 +5,20 @@
  * @see https://github.com/rx-ts/prettier/tree/master/packages/sh
  */
 
-module.exports = {
+const { Config } = require('prettier')
+
+/**
+ * @type {Config}
+ * @const config - Configuration object
+ */
+const config = {
   arrowParens: 'avoid',
   bracketSameLine: false,
   bracketSpacing: true,
   htmlWhitespaceSensitivity: 'css',
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
+  plugins: [],
   printWidth: 80,
   proseWrap: 'always',
   semi: false,
@@ -32,10 +39,17 @@ module.exports = {
         keepComments: true,
         keepPadding: false,
         parser: 'sh',
+        plugins: ['prettier-plugin-sh'],
         spaceRedirects: true,
         switchCaseIndent: true,
         variant: 0
       }
+    },
+    {
+      files: ['*.ts'],
+      parser: 'typescript'
     }
   ]
 }
+
+module.exports = config
