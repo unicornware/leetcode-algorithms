@@ -7,9 +7,9 @@
 
 /**
  * @type {string}
- * @const {string} PWD - Current working directory
+ * @const {string} PWD - Root project directory
  */
-const PWD = process.cwd()
+const PWD = process.env.PROJECT_CWD
 
 /**
  * @type {string[]}
@@ -35,16 +35,16 @@ const config = {
   forbidOnly: true,
   forbidPending: false,
   fullTrace: true,
-  globals: ['chai', 'expect', 'pf', 'sandbox'],
+  globals: ['chai', 'expect', 'faker', 'pf', 'sandbox'],
   growl: !(require('is-ci') && JSON.parse(process.env.CI ?? 'false')),
-  ignore: ['coverage/**', 'node_modules/**'],
+  ignore: ['coverage', 'node_modules'],
   inlineDiffs: true,
-  isWorker: true,
+  isWorker: false,
   noHighlighting: false,
-  nodeOption: [],
+  'node-option': [],
   parallel: false,
   recursive: true,
-  reporterOptions: [],
+  reporter: `${PWD}/__tests__/reporters/json-spec.reporter.ts`,
   require: [
     'ts-node/register',
     `${PWD}/tools/helpers/tsconfig-paths.cjs`,
@@ -54,7 +54,7 @@ const config = {
   ],
   retries: 0,
   sort: true,
-  spec: 'src/{,!(coverage|node_modules)/**}/__tests__/*.spec.ts',
+  spec: 'src/**/__tests__/*.spec.ts',
   timeout: 10 * 1000,
   ui: 'bdd',
   watch: false

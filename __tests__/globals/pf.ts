@@ -5,5 +5,20 @@
  */
 
 import { format } from 'pretty-format'
+import type { PrettyFormatOptions } from 'pretty-format/build/types'
 
-global.pf = format
+/**
+ * Returns a string representation of `val`.
+ *
+ * @param {unknown} val - Value to stringify
+ * @param {PrettyFormatOptions} [options={min:true}] - Formatting options
+ * @return {string} String representation of `val`
+ */
+const pf = (val: unknown, options: PrettyFormatOptions = {}): string => {
+  // Set min default
+  if (options.min === undefined) options.min = true
+
+  return format(val, options)
+}
+
+global.pf = pf

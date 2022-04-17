@@ -10,7 +10,7 @@ import type Testcase from './testcase.interface'
  *
  * @template T - Test subject
  *
- * @extends Testcase<ReturnType<T>>
+ * @extends {Testcase<ReturnType<T>>}
  */
 interface TestcaseFn<T extends (...args: any[]) => any>
   extends Testcase<ReturnType<T>> {

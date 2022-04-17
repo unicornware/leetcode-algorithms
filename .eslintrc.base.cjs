@@ -485,7 +485,8 @@ const config = {
     '@typescript-eslint/typedef': 0,
     '@typescript-eslint/unbound-method': [2, { ignoreStatic: true }],
     '@typescript-eslint/unified-signatures': 2,
-    'array-bracket-newline': [2, { multiline: true }],
+    'array-bracket-newline': [2, 'consistent'],
+    /** @see https://github.com/prettier/prettier-vscode/issues/352 */
     'array-element-newline': [2, 'consistent'],
     'brace-style': 0,
     'comma-dangle': 0,
@@ -817,6 +818,7 @@ const config = {
     'unicorn/throw-new-error': 2
   },
   overrides: [
+    ...require('./.eslintrc.spec.cjs').overrides,
     {
       files: ['typings/**'],
       rules: {
@@ -834,7 +836,6 @@ const config = {
         '.commitlintrc.ts',
         '.eslintrc.*',
         '.lintstagedrc.cjs',
-        '.mocharc.*',
         '.prettierrc.cjs'
       ],
       rules: {
@@ -852,30 +853,17 @@ const config = {
         ]
       }
     },
-
-    {
-      files: ['.eslintrc.*', '.mocharc.*'],
-      rules: {
-        'spellcheck/spell-checker': 0
-      }
-    },
     {
       files: ['.eslintrc.*', '.prettierrc.cjs'],
       rules: {
         'sort-keys': 0
       }
     },
-
     {
       files: ['.eslintrc.*'],
       rules: {
+        'spellcheck/spell-checker': 0,
         'unicorn/string-content': 0
-      }
-    },
-    {
-      files: ['.mocharc.*'],
-      rules: {
-        '@typescript-eslint/strict-boolean-expressions': 0
       }
     },
     {
@@ -907,21 +895,6 @@ const config = {
     {
       files: ['**/*.md/*.ts'],
       parser: require.resolve('@typescript-eslint/parser')
-    },
-    {
-      files: ['**/*.spec.ts'],
-      rules: {
-        '@typescript-eslint/no-misused-promises': 0,
-        '@typescript-eslint/no-unused-expressions': 0,
-        '@typescript-eslint/restrict-template-expressions': 0,
-        'unicorn/consistent-destructuring': 0,
-        'unicorn/consistent-function-scoping': 0,
-        'unicorn/explicit-length-check': 0,
-        'unicorn/no-array-for-each': 0,
-        'unicorn/no-array-reduce': 0,
-        'unicorn/prefer-at': 0,
-        'unicorn/no-useless-undefined': 0
-      }
     },
     {
       files: ['**/*.ts'],

@@ -10,6 +10,7 @@ import sinonChai from 'sinon-chai'
 
 // Configure chai
 chai.config.includeStack = true
+chai.config.truncateThreshold = 0
 
 /**
  * Initialize plugins.

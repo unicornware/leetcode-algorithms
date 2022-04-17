@@ -7,12 +7,14 @@ coverage/*
 node_modules/*
 
 **/.gitkeep
+__tests__/report.json
 .eslintignore
 .env.*
 .env
 .github/.gitconfig
 .gitignore
 .markdownlintignore
+.nycrc
 .prettierignore
 CHANGELOG.md
 yarn.lock

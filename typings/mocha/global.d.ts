@@ -1,7 +1,7 @@
 declare global {
   namespace Mocha {
     interface Context {
-      inspect: typeof inspect
+      faker: typeof faker
       pf: typeof pf
       sandbox: typeof sandbox
     }

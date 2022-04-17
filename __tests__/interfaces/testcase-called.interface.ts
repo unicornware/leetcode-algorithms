@@ -10,7 +10,7 @@ import type Testcase from './testcase.interface'
  *
  * @see https://github.com/domenic/sinon-chai#assertions
  *
- * @extends Testcase<number>
+ * @extends {Testcase<number>}
  */
 interface TestcaseCalled extends Testcase<number> {
   call: 'call' | 'not call'

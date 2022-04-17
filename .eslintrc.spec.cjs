@@ -10,6 +10,12 @@
 const { Linter } = require('eslint')
 
 /**
+ * @type {string[]}
+ * @const DEFINED_TYPES - `jsdoc/no-undefined-types` options
+ */
+const DEFINED_TYPES = ['Mocha', 'NodeJS', 'never', 'unknown']
+
+/**
  * @type {Linter.Config}
  * @const config - ESLint configuration object
  */
@@ -26,7 +32,7 @@ const config = {
     chai: true,
     describe: true,
     expect: true,
-    inspect: true,
+    faker: true,
     it: true,
     pf: true,
     sandbox: true
@@ -35,6 +41,10 @@ const config = {
     {
       files: ['**/*.spec.ts'],
       rules: {
+        '@typescript-eslint/no-base-to-string': 0,
+        '@typescript-eslint/no-magic-numbers': 0,
+        '@typescript-eslint/no-unused-expressions': 0,
+        '@typescript-eslint/restrict-template-expressions': 0,
         'chai-expect/missing-assertion': 2,
         'chai-expect/no-inner-compare': 2,
         'chai-expect/no-inner-literal': 2,
@@ -70,15 +80,88 @@ const config = {
         'mocha/prefer-arrow-callback': 2,
         'mocha/valid-suite-description': [
           2,
-          { pattern: '^[.$#@a-z0-9(DELETE|GET|PATCH|POST|PUT)]*.+' }
+          {
+            pattern: '^[.$#@a-z0-9(DELETE|GET|PATCH|POST|PUT)]*.+'
+          }
         ],
         'mocha/valid-test-description': [2, { pattern: '^should.[a-z0-9]+.*' }],
         'prefer-arrow-callback': 0,
-        'promise/valid-params': 0
+        'promise/valid-params': 0,
+        'unicorn/consistent-destructuring': 0,
+        'unicorn/consistent-function-scoping': 0,
+        'unicorn/explicit-length-check': 0,
+        'unicorn/no-array-for-each': 0,
+        'unicorn/no-array-reduce': 0,
+        'unicorn/prefer-at': 0,
+        'unicorn/no-useless-undefined': 0
+      }
+    },
+    {
+      files: [
+        '__tests__/config/global-fixtures.ts',
+        '__tests__/config/root-hooks.ts',
+        '__tests__/globals/**',
+        '.mocharc.*'
+      ],
+      rules: {
+        'jsdoc/no-undefined-types': [1, { definedTypes: DEFINED_TYPES }]
+      }
+    },
+    {
+      files: ['__tests__/globals/chai.ts', '__tests__/matchers/**'],
+      rules: {
+        'jsdoc/no-undefined-types': [
+          1,
+          {
+            definedTypes: [...DEFINED_TYPES, 'Chai']
+          }
+        ]
+      }
+    },
+    {
+      files: ['__tests__/globals/**'],
+      rules: {
+        'jsdoc/no-undefined-types': [1, { definedTypes: DEFINED_TYPES }]
+      }
+    },
+    {
+      files: ['__tests__/reporters/**'],
+      rules: {
+        '@typescript-eslint/dot-notation': 0,
+        '@typescript-eslint/no-magic-numbers': 0,
+        'sort-keys': 0
+      }
+    },
+    {
+      files: ['**/.mocharc.*'],
+      rules: {
+        '@typescript-eslint/no-magic-numbers': 0,
+        '@typescript-eslint/strict-boolean-expressions': 0,
+        'jsdoc/require-file-overview': [
+          1,
+          {
+            tags: {
+              file: {
+                initialCommentsOnly: true,
+                mustExist: true,
+                preventDuplicates: true
+              }
+            }
+          }
+        ],
+        'spellcheck/spell-checker': 0
       }
     }
   ],
-  plugins: ['chai-expect', 'istanbul', 'jest-formatting', 'mocha'],
+  plugins: [
+    '@typescript-eslint',
+    'chai-expect',
+    'istanbul',
+    'jest-formatting',
+    'mocha',
+    'spellcheck',
+    'unicorn'
+  ],
   rules: {
     'jsdoc/no-undefined-types': [1, { definedTypes: ['Chai', 'Mocha'] }]
   },
