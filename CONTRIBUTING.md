@@ -3,7 +3,10 @@
 ## Overview
 
 [Getting Started](#getting-started)  
-[Contributing Code](#contributing-code)
+[Contributing Code](#contributing-code)  
+[Labels](#labels)  
+[Opening Issues](#opening-issues)  
+[Pull Requests](#pull-requests)
 
 ## Getting Started
 
@@ -122,6 +125,59 @@ need to create a new issue regarding a test, or need to make a `wip` commit, use
 
 - run all test suites: `yarn test`
 - run all test suites (with live coverage view): `yarn test:coverage`
+
+### Getting Help
+
+If you need help, make note of any issues in their respective files. Whenever
+possible, create a test to reproduce the error. Make sure to label your issue as
+`type:question` and `status:help-wanted`.
+
+## Labels
+
+This project uses a well-defined list of labels to organize tickets and pull
+requests. Most labels are grouped into different categories (identified by the
+prefix, eg: `status:`).
+
+A list of labels can be found in [`.github/labels.yml`](.github/labels.yml).
+
+## Opening Issues
+
+Before opening an issue please make sure, you have:
+
+- read the documentation
+- searched open issues for an existing issue with the same topic
+- search closed issues for a solution or feedback
+
+If you haven't found a related open issue, or feel that a closed issue should be
+re-visited, please open a new issue. A well-written issue has the following
+traits:
+
+- follows an [issue template](.github/ISSUE_TEMPLATE)
+- is [labeled](#labels) appropriately
+- contains a well-written summary of the feature, bug, or problem statement
+- contains a minimal, inlined code example (if applicable)
+- includes links to prior discussions and resources (if you've found any)
+
+## Pull Requests
+
+When you're ready to have your changes reviewed, open a pull request against the
+`next` branch.
+
+Every opened PR should:
+
+- use [**this template**](.github/PULL_REQUEST_TEMPLATE.md)
+- reference it's ticket id
+- be [labeled](#labels) appropriately
+- be assigned to yourself
+- give maintainers push access so quick fixes can be pushed to your branch
+
+### Pull Request URL Format
+
+```zsh
+https://github.com/unicornware/leetcode-algorithms/compare/next...<branch>
+```
+
+where `<branch>` is the name of the branch you'd like to merge into `next`.
 
 [1]: https://yarnpkg.com/getting-started/migration
 [2]: https://github.com/typicode/husky
