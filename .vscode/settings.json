@@ -7,12 +7,7 @@
     "overrideConfigFile": "./.eslintrc.cjs"
   },
   "eslint.packageManager": "yarn",
-  "eslint.validate": [
-    "javascript",
-    "markdown",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "markdown", "typescript"],
   "files.associations": {
     ".env*": "shellscript",
     "commit-msg": "shellscript",
@@ -42,11 +37,10 @@
       "icon": "lintstagedrc"
     },
     {
-      "extensions": ["prod.cjs.json", "prod.esm.json", "prod.types.json"],
+      "extensions": [".markdownlint.yml", ".markdownlintignore"],
       "format": "svg",
-      "icon": "tsconfig"
+      "icon": "markdownlint"
     },
-
     {
       "extensions": ["yarnrc.yml"],
       "format": "svg",
