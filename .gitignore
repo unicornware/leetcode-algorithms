@@ -84,15 +84,7 @@ __tests__/report.json
 # Optional eslint cache
 .eslintcache
 
-### Builds & Distributions ###
-# Directories
-cjs/
-dist/
-esm/
-types/
-!src/types
-!typings/tsc-prog/dist/
-
+### Builds & Files ###
 # Files
 *.js
 *.zip
