@@ -4,8 +4,7 @@
  * @see https://leetcode.com/problems/add-two-numbers
  */
 
-import type { OneDigitInteger09 } from '@leetcode/types'
-import ListNode from './list-node'
+import ListNode from '@leetcode/models/list-node-number.model'
 
 /**
  * Given two **non-empty** linked lists representing two non-negative integers,
@@ -34,15 +33,13 @@ function addTwoNumbers(
   /** @const {number} sum - Sum of current nodes */
   const sum: number = l1.val + l2.val
 
-  /** @var {ListNode | null} nx - Next node, if any */
-  let nx: ListNode | null = addTwoNumbers(l1.next ?? null, l2.next ?? null)
+  /** @var {ListNode | null} next - Next node, if any */
+  let next: ListNode | null = addTwoNumbers(l1.next ?? null, l2.next ?? null)
 
   // If sum is greater than 10, carry
-  if (sum >= 10) {
-    nx = addTwoNumbers(nx, new ListNode(+`${sum}`[0]! as OneDigitInteger09))
-  }
+  if (sum >= 10) next = addTwoNumbers(next, new ListNode(+`${sum}`[0]!))
 
-  return new ListNode((sum % 10) as OneDigitInteger09, nx)
+  return new ListNode(sum % 10, next)
 }
 
 export default addTwoNumbers

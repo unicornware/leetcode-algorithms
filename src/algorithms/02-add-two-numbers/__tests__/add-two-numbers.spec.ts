@@ -3,10 +3,10 @@
  * @module leetcode/algorithms/02/addTwoNumbers/tests/unit
  */
 
+import ListNode from '@leetcode/models/list-node-number.model'
 import type { OneDigitInteger09 } from '@leetcode/types'
 import type { TestcaseFn } from '@tests/interfaces'
 import testSubject from '../add-two-numbers'
-import ListNode from '../list-node'
 
 describe('unit:algorithms/02/addTwoNumbers', () => {
   interface Case extends TestcaseFn<typeof testSubject> {}

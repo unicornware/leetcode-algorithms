@@ -20,28 +20,6 @@ const config = {
       rules: {
         '@typescript-eslint/restrict-plus-operands': 0
       }
-    },
-    {
-      files: ['src/algorithms/02-add-two-numbers/list-node.ts'],
-      rules: {
-        'jsdoc/require-file-overview': [
-          1,
-          {
-            tags: {
-              file: {
-                initialCommentsOnly: true,
-                mustExist: true,
-                preventDuplicates: true
-              },
-              module: {
-                initialCommentsOnly: true,
-                mustExist: true,
-                preventDuplicates: true
-              }
-            }
-          }
-        ]
-      }
     }
   ]
 }
