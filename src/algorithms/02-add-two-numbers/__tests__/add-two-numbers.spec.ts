@@ -5,6 +5,7 @@
 
 import ListNode from '@leetcode/models/list-node-number.model'
 import type { TestcaseFn } from '@tests/interfaces'
+import createLinkedList from '@tests/utils/create-linked-list'
 import testSubject from '../add-two-numbers'
 
 describe('unit:algorithms/02/addTwoNumbers', () => {
@@ -20,7 +21,7 @@ describe('unit:algorithms/02/addTwoNumbers', () => {
     let nodes = reversed.map(val => new ListNode(val))
     nodes.forEach((node, i) => (node.next = nodes[i + 1] ?? null))
 
-    return nodes[0]!
+    return createLinkedList<number>(reversed, ListNode)
   }
 
   const cases: Case[] = [

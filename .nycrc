@@ -2,16 +2,12 @@
   "all": false,
   "cache": false,
   "exclude": [
-    "**/*.enum.ts",
-    "**/*.interface.ts",
-    "**/*.type.ts",
     "**/__doubles__/**",
-    "**/__tests__/**",
-    "**/index.ts"
+    "**/__tests__/**"
   ],
   "excludeNodeModules": true,
   "extension": [".ts"],
-  "include": ["src"],
+  "include": ["src/algorithms"],
   "report-dir": "./coverage",
   "reporter": ["json-summary", "lcov", "text"],
   "skip-full": false,
