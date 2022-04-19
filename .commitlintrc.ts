@@ -46,6 +46,7 @@ const config: UserConfig = {
       2,
       'always',
       [
+        'abstracts',
         'algs',
         'deps',
         'deps-dev',
@@ -53,6 +54,8 @@ const config: UserConfig = {
         'deps-peer',
         'fixtures',
         'github',
+        'interfaces',
+        'models',
         'scripts',
         'tests',
         'tools',
