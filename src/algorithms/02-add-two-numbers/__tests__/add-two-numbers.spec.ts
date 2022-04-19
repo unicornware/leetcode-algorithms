@@ -4,7 +4,6 @@
  */
 
 import ListNode from '@leetcode/models/list-node-number.model'
-import type { OneDigitInteger09 } from '@leetcode/types'
 import type { TestcaseFn } from '@tests/interfaces'
 import testSubject from '../add-two-numbers'
 
@@ -14,10 +13,10 @@ describe('unit:algorithms/02/addTwoNumbers', () => {
   /**
    * Creates a new list and returns the first node in the list.
    *
-   * @param {OneDigitInteger09[]} reversed - List node values in reverse order
-   * @return {ListNode} First node in list
+   * @param {number[]} reversed - List node values in reverse order
+   * @return {ListNode} Head node
    */
-  const createList = (reversed: OneDigitInteger09[]): ListNode => {
+  const createList = (reversed: number[]): ListNode => {
     let nodes = reversed.map(val => new ListNode(val))
     nodes.forEach((node, i) => (node.next = nodes[i + 1] ?? null))
 

@@ -1,6 +1,6 @@
 /**
  * @file Entry Point - Type Definitions
- * @module leetcode-algorithms/types
+ * @module leetcode/types
  */
 
-export type { default as OneDigitInteger09 } from './one-digit-integer-09.type'
+export {}
