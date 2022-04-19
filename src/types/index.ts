@@ -3,4 +3,4 @@
  * @module leetcode/types
  */
 
-export {}
+export type { default as ListNodeConstruct } from './list-node-construct.type'
