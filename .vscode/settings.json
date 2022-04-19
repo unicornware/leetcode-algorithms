@@ -61,6 +61,11 @@
       "extensions": ["algorithms"],
       "format": "svg",
       "icon": "library"
+    },
+    {
+      "extensions": ["abstracts"],
+      "format": "svg",
+      "icon": "model"
     }
   ]
 }
